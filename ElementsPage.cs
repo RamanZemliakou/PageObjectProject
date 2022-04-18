@@ -9,7 +9,7 @@ namespace PageObjectProject
 {
     public class ElementsPage : ElementsPageGroup
     {
-        public string URL = "https://demoqa.com/elements";
+        public string elementsURL = "https://demoqa.com/elements";
         public ElementsPage(IWebDriver driver) : base(driver)
         {
 

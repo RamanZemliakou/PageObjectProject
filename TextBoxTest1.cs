@@ -1,6 +1,9 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System;
+using System.Linq;
+using System.Text;
 
 namespace PageObjectProject
 {
@@ -19,7 +22,7 @@ namespace PageObjectProject
         [Test]
         public void OutputFieldTest()
         {
-            var inputName = nameOutput.Text;
+            var inputName = nameOutput;
             Assert.AreEqual("Name:" + userName, inputName);
         }
 

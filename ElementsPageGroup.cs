@@ -9,7 +9,8 @@ namespace PageObjectProject
 {
     public abstract class ElementsPageGroup : BasePage
     {
-        protected IWebElement textBoxButton { get { return driver.FindElement(By.XPath("//*[@id='item - 0']/span")); } }
+        private readonly string elementLocator = "//*[@id='item - 0']/span";
+        protected IWebElement textBoxButton { get { return driver.FindElement(By.XPath(elementLocator)); } }
 
 
         public ElementsPageGroup(IWebDriver driver) : base(driver) { }

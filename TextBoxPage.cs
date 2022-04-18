@@ -2,6 +2,9 @@
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace PageObjectProject
 {
@@ -58,12 +61,12 @@ namespace PageObjectProject
 
         }
 
-        public void EnterName(string name)
+        public void EnterName(string userName)
         {
             fullNameField.SendKeys(userName);
         }
 
-        public void EnterEmail(string email)
+        public void EnterEmail(string userEmail)
         {
             eMailField.SendKeys(userEmail);
         }

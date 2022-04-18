@@ -7,7 +7,13 @@ namespace PageObjectProject
     public class BasePage
     {
        protected IWebDriver driver;
-        public string URL = "https://demoqa.com";
+        public string baseURL = "https://demoqa.com";
+
+        public BasePage(string baseURL)
+        {
+            this.baseURL = baseURL;
+        }
+
         public BasePage(IWebDriver driver)
         {
             this.driver = driver;
