@@ -23,7 +23,7 @@ namespace PageObjectProject
         private readonly string userName = "New User";
         private readonly string userEmail = "mail@mail.com";
         private readonly string currentAddress = "Belarus, Minsk";
-        private readonly string permanetAddress = "some other address";
+        private readonly string permanetAddress = "some other address"; // to test
 
         public const string URL = "https://demoqa.com/text-box";
         private IWebElement fullNameField
