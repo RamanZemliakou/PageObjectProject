@@ -6,8 +6,10 @@ namespace PageObjectProject
 {
     public class BasePage
     {
-       protected IWebDriver driver;
+        private ChromeDriver driver;
         public string baseURL = "https://demoqa.com";
+
+        protected ChromeDriver Driver { get => driver; set => driver = value; }
 
         public BasePage(string baseURL)
         {
@@ -16,7 +18,7 @@ namespace PageObjectProject
 
         public BasePage(IWebDriver driver)
         {
-            this.driver = driver;
+            this.driver = (ChromeDriver?)driver;
         }
     }
 }

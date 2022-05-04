@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,10 +11,17 @@ namespace PageObjectProject
     public abstract class ElementsPageGroup : BasePage
     {
         private readonly string elementLocator = "//*[@id='item - 0']/span";
+        private ChromeDriver _driver;
+
         protected IWebElement textBoxButton { get { return driver.FindElement(By.XPath(elementLocator)); } }
 
 
-        public ElementsPageGroup(IWebDriver driver) : base(driver) { }
+        //public ElementsPageGroup(IWebDriver driver) : base(driver) { }
+
+        public ElementsPageGroup()
+        {
+            _driver = new ChromeDriver();
+        }
 
         public void ClickTextBoxButton() { textBoxButton.Click(); }
 
