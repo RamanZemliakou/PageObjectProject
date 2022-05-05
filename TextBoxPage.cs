@@ -19,12 +19,8 @@ namespace PageObjectProject
         private readonly string submitButtonLocator = "//*[@id='submit']";
         private readonly string outputFieldLocator = "//*[@id='output']";
         private readonly string outputNameLocator = "//*[@id='name']";
-        private readonly ChromeDriver _driver;
+        //private readonly ChromeDriver _driver;
 
-        //private readonly string userName = "New User";
-        //private readonly string userEmail = "mail@mail.com";
-        //private readonly string currentAddress = "Belarus, Minsk";
-        //private readonly string permanetAddress = "some other address"; 
 
         public const string URL = "https://demoqa.com/text-box";
         private IWebElement fullNameField
@@ -55,14 +51,17 @@ namespace PageObjectProject
         {
             get { return driver.FindElement(By.XPath(outputNameLocator)); }
         }
-       
 
-        //public TextBoxPage(IWebDriver driver) : base(driver)
-        //{
 
-        //}
+        public TextBoxPage(ChromeDriver driver) : base(driver) 
+        {
+            
+        }
 
-        public TextBoxPage() => _driver = new ChromeDriver();
+        public TextBoxPage()
+        {
+            
+        }
 
         public void EnterName(string userName)
         {
@@ -97,7 +96,7 @@ namespace PageObjectProject
         public void CloseDriver()
         {
             driver.Close();
-        } //closes driver
+        } 
     }
 
 }

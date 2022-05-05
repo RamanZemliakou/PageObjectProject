@@ -16,22 +16,19 @@ namespace PageObjectProject
         [SetUp]
         public void Setup()
         {
-            //_driver = new ChromeDriver(); is not used in Test Class
-            textBoxPage = new TextBoxPage(); // rewrite pages not to use driver from test, new Class Provider
-            // json with data
+            TextBoxPage textBoxPage = new();
 
         }
 
         [Test]
         public void OutputFieldTest()
         {
-            //object nameOutput;
             string userName = "New User";
             string userEmail = "mail@mail.com";
             string currentAddress = "Belarus, Minsk";
             string permanetAddress = "some other address";
 
-            textBoxPage.EnterName(userName); // enter all info -> Submit -> check result AreEqual
+            textBoxPage.EnterName(userName); 
             textBoxPage.EnterEmail(userEmail);
             textBoxPage.EnterCurrentAddress(currentAddress);
             textBoxPage.EnterPermanentAddress(permanetAddress);

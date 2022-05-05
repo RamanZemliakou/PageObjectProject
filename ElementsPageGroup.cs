@@ -18,10 +18,8 @@ namespace PageObjectProject
 
         //public ElementsPageGroup(IWebDriver driver) : base(driver) { }
 
-        public ElementsPageGroup()
-        {
-            _driver = new ChromeDriver();
-        }
+        public ElementsPageGroup(ChromeDriver driver) : base(driver) { }
+
 
         public void ClickTextBoxButton() { textBoxButton.Click(); }
 
