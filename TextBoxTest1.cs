@@ -9,15 +9,14 @@ namespace PageObjectProject
 {
     internal class TextBoxTest1
     {
-        //WebDriver? _driver; is not used in Test Class
-        TextBoxPage textBoxPage;
+        private TextBoxPage textBoxPage;
 
 
         [SetUp]
-        public void Setup()
+        public void TextBoxTest(TextBoxPage page)
         {
-            TextBoxPage textBoxPage = new();
-
+            //TextBoxPage textBoxPage = new();
+            this.textBoxPage = page;
         }
 
         [Test]
@@ -39,7 +38,7 @@ namespace PageObjectProject
         }
 
         [TearDown]
-        public void TearDown()
+        public void EndTest()
         {
             textBoxPage.CloseDriver();
         }

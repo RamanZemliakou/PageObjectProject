@@ -10,8 +10,6 @@ namespace PageObjectProject
 {
     public class TextBoxPage : ElementsPageGroup
     {
-
-        
         private readonly string fullNameLocator = "//*[@id='userName']";
         private readonly string eMailLocator = "//*[@id='userEmail']";
         private readonly string currentAdressLocator = "//*[@id='currentAddress']";
@@ -19,8 +17,6 @@ namespace PageObjectProject
         private readonly string submitButtonLocator = "//*[@id='submit']";
         private readonly string outputFieldLocator = "//*[@id='output']";
         private readonly string outputNameLocator = "//*[@id='name']";
-        //private readonly ChromeDriver _driver;
-
 
         public const string URL = "https://demoqa.com/text-box";
         private IWebElement fullNameField
@@ -54,11 +50,6 @@ namespace PageObjectProject
 
 
         public TextBoxPage(ChromeDriver driver) : base(driver) 
-        {
-            
-        }
-
-        public TextBoxPage()
         {
             
         }

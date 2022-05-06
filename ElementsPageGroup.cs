@@ -11,15 +11,10 @@ namespace PageObjectProject
     public abstract class ElementsPageGroup : BasePage
     {
         private readonly string elementLocator = "//*[@id='item - 0']/span";
-        private ChromeDriver _driver;
 
         protected IWebElement textBoxButton { get { return driver.FindElement(By.XPath(elementLocator)); } }
 
-
-        //public ElementsPageGroup(IWebDriver driver) : base(driver) { }
-
         public ElementsPageGroup(ChromeDriver driver) : base(driver) { }
-
 
         public void ClickTextBoxButton() { textBoxButton.Click(); }
 
