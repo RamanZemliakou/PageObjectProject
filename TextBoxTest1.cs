@@ -7,16 +7,16 @@ using System.Text;
 
 namespace PageObjectProject
 {
-    internal class TextBoxTest1
+    public class TextBoxTest1
     {
-        private TextBoxPage textBoxPage;
+        public const string URL = "https://demoqa.com/text-box";
+        private readonly TextBoxPage? textBoxPage;
 
 
         [SetUp]
-        public void TextBoxTest(TextBoxPage page)
+        public void Setup()
         {
-            //TextBoxPage textBoxPage = new();
-            this.textBoxPage = page;
+            textBoxPage.GoToUrl(URL);
         }
 
         [Test]
@@ -38,7 +38,7 @@ namespace PageObjectProject
         }
 
         [TearDown]
-        public void EndTest()
+        public void TearDown()
         {
             textBoxPage.CloseDriver();
         }

@@ -51,9 +51,17 @@ namespace PageObjectProject
 
         public TextBoxPage(ChromeDriver driver) : base(driver) 
         {
-            
+            driver = new ChromeDriver();
         }
 
+        //public TextBoxPage()
+        //{
+        //    driver = new ChromeDriver();
+        //}
+        public void GoToUrl(string URL)
+        {
+            driver.Navigate().GoToUrl(URL);
+        }
         public void EnterName(string userName)
         {
             fullNameField.SendKeys(userName);
