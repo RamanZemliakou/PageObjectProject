@@ -54,10 +54,10 @@ namespace PageObjectProject
             driver = new ChromeDriver();
         }
 
-        //public TextBoxPage()
-        //{
-        //    driver = new ChromeDriver();
-        //}
+        public TextBoxPage()
+        {
+            driver.Url = URL;
+        }
         public void GoToUrl(string URL)
         {
             driver.Navigate().GoToUrl(URL);

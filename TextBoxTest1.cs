@@ -9,14 +9,14 @@ namespace PageObjectProject
 {
     public class TextBoxTest1
     {
-        public const string URL = "https://demoqa.com/text-box";
+        //public const string URL = "https://demoqa.com/text-box";
         private readonly TextBoxPage? textBoxPage;
 
 
         [SetUp]
         public void Setup()
         {
-            textBoxPage.GoToUrl(URL);
+            //textBoxPage.GoToUrl(URL);
         }
 
         [Test]
